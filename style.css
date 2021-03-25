@@ -1,0 +1,401 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap');
+:root {
+  --header-height: 3rem;
+  --nav-width: 324px;
+
+  /*====== Font Weight =======*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  --font-bold: 700;
+
+  /*====== Colors ======*/
+  --first-color: #FFF13D;
+  --first-color-dark: #aca329;
+  --first-color-darken: #4d4913;
+  --text-color: #393833;
+  --first-color-light: #f8f5ce;
+  --first-color-lighten: #fffeef;
+
+  /*====== Font and typography =======*/
+  --body-font: 'Roboto', sans-serif;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
+
+  /* ====== Margins  =======*/
+  --m-1: 0.5rem;
+  --m-2: 1rem;
+  --m-3: 1.5rem;
+  --m-4: 2rem;
+  --m-5: 2.5rem;
+  --m-6: 3rem;
+  --m-7: 3.5rem;
+  --m-8: 4rem;
+  --m-16: 8rem;
+  
+  --z-fixed: 100;
+}
+@media screen and (min-width: 768px) {
+  :root {
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.813rem;
+  }
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+  background-color: var(--first-color-lighten);
+  color: var(--text-color);
+  line-height: 1.6;
+  width:100%;
+  height:100%;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h3 {
+  font-weight: var(--font-semi-bold);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+a:focus{
+  outline:none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button:focus{
+  outline: none;
+}
+
+button:hover{
+  cursor:pointer;
+}
+
+/*======== END OF GENERAL SETTINGS ======*/
+
+.container{
+  padding: 0 var(--m-16);
+}
+
+header{
+  background-color: var(--first-color);
+}
+
+.navbar{
+  font-family: 'Poppins';
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--m-4) 0;
+}
+.navbarLogo a{
+  display:flex;
+  justify-content:center;
+  align-items: center;
+}
+
+.navbarLogo span{
+  font-weight: 700;
+  font-size: 20px;
+  color: #555555;
+  padding-left: var(--m-1);
+}
+
+.navbar__logo{
+  height:46px;
+  width:46px;
+}
+
+.navbarListItems{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar__link{
+  margin-left:var(--m-6);
+  font-weight: 500;
+}
+
+.navbar__link:hover{
+  font-weight: 600;
+  color:#272725;
+}
+
+
+.hero{
+  height:500px;
+  width: 100%;
+  border-bottom-left-radius: 750px 100px;
+  border-bottom-right-radius: 900px 100px;
+  background-color: var(--first-color);
+}
+
+.hero .content{
+  padding-top: var(--m-4);
+  display:flex;
+  justify-content:space-between;
+}
+.heroAction{
+  width:70%;
+}
+
+.heroAction h1 {
+  font-size: 52px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.hero p{
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.2;
+  margin-top: var(--m-2);
+  width:75%;
+}
+.hero button{
+  margin-top: var(--m-2);
+}
+
+.btn{
+  background: none;
+  outline: none;
+  border:none;
+  border-radius: 5px;
+}
+
+.btn-primary{
+  width:max-content;
+  height:max-content;
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: #272725;
+  color: var(--first-color-light);
+  letter-spacing: 1.2px;
+  padding: .8rem 1.2rem;  
+}
+
+.heroImages{
+  height:300px;
+  width:35%;
+  margin: 0 0 0 5rem;
+  position: relative;
+}
+
+.hero__workerImg{
+  position: absolute;
+  left: -50px;
+}
+
+.hero__asset{
+  width:300px;
+  height:300px;
+}
+
+.hero__surround{
+  position: absolute;
+  top:250px;
+  right:0;
+  height:150px;
+}
+
+.heroSocial{
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+.hero__social-icon:hover{
+  transform: translateY(-20px);
+  transition: all .5s ease-in-out;
+}
+
+.hero__social-icon{
+  border: 1px solid #272725;
+  height:38px;
+  width:38px;
+  border-radius: 100%;
+  margin: 0 .5rem;
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  background-color: #272725;
+  transition: all .5s ease-in-out;
+}
+
+.hero__social-icon .iconify{
+  height:26px;
+  width:26px;
+  cursor:pointer;
+  color: var(--first-color);
+}
+
+@media (max-width:425px){
+
+  .container{
+    padding: 0 var(--m-4);
+  }
+
+  header{
+    position: fixed;
+    width:100%;
+    z-index: 1;
+    padding: 0;
+  }
+
+  .navbar{
+    width:100%;
+    padding: 1rem 0;
+  }
+
+  .navbarLogo span{
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .navbar__burger{
+    background-color: var(--first-color);
+    border:0;
+  }
+
+  .navbar__burger .iconify{
+    width:22px;
+    height:22px;
+    display:block;
+  }
+
+  .navbar__logo{
+    width:36px;
+    height:36px;
+  }
+
+  .navbarListItems {
+    display:none;
+  }
+
+  .navbar__burger .iconify.clicked{
+    display:none;
+  }
+
+
+
+
+
+
+  /**/
+  .hero{
+    padding-top: 3rem;
+  }
+
+  .hero .content{
+    flex-direction: column;
+    margin-top: var(--m-2);
+  }
+  .heroAction{
+    width:100%;
+  }
+
+  .heroAction h1{
+    font-size: 30px;
+  }
+
+  .heroAction p {
+    font-size: 16px;
+    width:100%;
+  }
+
+  .heroImages{
+    width:100%;
+    margin:0;
+    margin-top: 20px;
+    position: relative;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+  }
+
+  .hero__workerImg{
+    position: absolute;
+    left:0;
+    top: 20px;
+  }
+
+  .hero__asset{
+    width:200px;
+    height:200px;
+  }
+
+  .hero__social-icon .iconify{
+    color:white;
+  }
+
+  .hero__surround{
+    position: absolute;
+    top:200px;
+    right:0;
+    height:150px;
+  }
+
+
+}
+
+@media (max-width: 991px) { 
+
+
+  .container{
+    padding: 0 2rem;
+  }
+  
+  .navbarLogo span{
+    font-size: 18px;
+  }
+
+  .heroAction h1{
+    font-size: var(--h1-font-size);
+  }
+  .navbar__burger{
+    display:none;
+  }
+}
